@@ -10,7 +10,7 @@ import reducers from './reducers';
 const createStoreWidthMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 ReactDOM.render(
-  <Provider store={createStoreWidthMiddleware}>
+  <Provider store={createStoreWidthMiddleware(reducers)}>
     <App />
   </Provider>,
   document.getElementById('root')
